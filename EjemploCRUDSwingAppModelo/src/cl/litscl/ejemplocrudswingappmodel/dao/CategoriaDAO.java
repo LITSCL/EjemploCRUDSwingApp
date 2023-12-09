@@ -17,7 +17,7 @@ public class CategoriaDAO {
 		try {
 			//1. Conectarse a la base de datos.
 			bdUtil.conectar();
-			System.out.println("Conexi�n a la DB: " + bdUtil.conectar());
+			System.out.println("Conexión a la DB: " + bdUtil.conectar());
 			//2. Definir la sentencia SQL (INSERT).
 			String sql = "INSERT INTO categoria(nombre) VALUES(?)"; //Los ID Autoincrementales no van aca, ya que el dbms asigna su valor.
 			//3. Preparar la sentencia SQL.
@@ -27,10 +27,10 @@ public class CategoriaDAO {
 			//4. Ejecutar la sentencia SQL.
 			ps.executeUpdate();
 			resultado = true;
-			System.out.println("Ejecuci�n del SQL: " + resultado);
+			System.out.println("Ejecución del SQL: " + resultado);
 		} catch (Exception ex) {
 			resultado = false;
-			System.out.println("Ejecuci�n del SQL: " + resultado);
+			System.out.println("Ejecución del SQL: " + resultado);
 			//5. Desconectarse.
 		} finally { 
 			bdUtil.desconectar(); //Envía la petición de desconexión al dbms.
@@ -87,7 +87,7 @@ public class CategoriaDAO {
 			//4. Ejecutar la sentencia SQL.
 			ResultSet rs = ps.executeQuery();
 			resultado = true;
-			System.out.println("Ejecuci�n del SQL: " + resultado);
+			System.out.println("Ejecución del SQL: " + resultado);
 			while (rs.next()) { //Se repite mientras avance el puntero.
 				c.setId(rs.getInt(1));
 				c.setNombre(rs.getString(2));

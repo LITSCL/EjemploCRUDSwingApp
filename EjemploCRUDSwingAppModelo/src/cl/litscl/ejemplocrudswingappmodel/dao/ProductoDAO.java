@@ -76,7 +76,7 @@ public class ProductoDAO {
 			productos = null;
 			//5. Desconectarse.
 		} finally { 
-			bdUtil.desconectar(); //Env�a la petición de desconexi�n al dbms.
+			bdUtil.desconectar(); //Envía la petición de desconexión al dbms.
 		}
 		return productos;
 	}
@@ -136,7 +136,7 @@ public class ProductoDAO {
 			//4. Ejecutar la sentencia SQL.
 			ResultSet rs = ps.executeQuery();
 			resultado = true;
-			System.out.println("Ejecuci�n del SQL: " + resultado);
+			System.out.println("Ejecución del SQL: " + resultado);
 			while (rs.next()) { //Se repite mientras avance el puntero.
 				p.setId(rs.getInt(1));
 				p.setNombre(rs.getString(2));
