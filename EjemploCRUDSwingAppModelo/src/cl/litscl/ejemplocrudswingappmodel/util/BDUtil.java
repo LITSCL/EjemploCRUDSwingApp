@@ -25,7 +25,6 @@ public class BDUtil {
 			return false;
 		}
 	}
-	
 
 	public void desconectar() {
 		try {
